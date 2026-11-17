@@ -110,13 +110,9 @@ document.addEventListener('DOMContentLoaded', () => {
   5. <strong>500+ NGINX Ingress to Gateway API:</strong> AI-assisted classification and candidate HTTPRoute generation with semantic linting.
   6. <strong>Distributed Tracing for TeraCar:</strong> OpenTelemetry & Jaeger isolated an unindexed query in a downstream dependency.`,
 
-    projects: `Public Repositories on GitHub:
-  • <strong>bharatprajapat-eng/ai-labs</strong>: Coding agent skills & AI-Augmented Trunk Flow strategy.
-  • <strong>bharatprajapat-eng/AI-models</strong>: PyTorch neural text generation pipeline with Docker containerization.
-  • <strong>bharatprajapat-eng/bytechef</strong>: Extensible low-code workflow automation & API integration platform.
-  • <strong>bharatprajapat-eng/tf-test</strong>: Declarative Terraform Infrastructure as Code test modules.
-  • <strong>bharatprajapat-eng/angular-formio</strong>: JSON-schema powered dynamic form engine for Angular.
-  • <strong>bharatprajapat-eng/bharatprajapat-eng.github.io</strong>: High-performance portfolio website source.`,
+    projects: `Featured Projects & Public Source:
+  • <strong>bharatprajapat-eng.github.io</strong>: Public portfolio & architecture showcase source on GitHub.
+  • <strong>Architecture Case Studies</strong>: Type <span class="cmd-highlight">cases</span> to explore 6 in-depth multi-cloud & platform engineering systems.`,
 
     contact: `Contact Information:
   • <strong>Email:</strong> bharat.p2311@gmail.com
