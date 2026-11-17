@@ -111,17 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
   6. <strong>Distributed Tracing for TeraCar:</strong> OpenTelemetry & Jaeger isolated an unindexed query in a downstream dependency.`,
 
     projects: `Public Repositories on GitHub:
-  • <strong>er-prajapat/ai-labs</strong>: Coding agent skills & AI-Augmented Trunk Flow strategy.
-  • <strong>er-prajapat/AI-models</strong>: PyTorch neural text generation pipeline with Docker containerization.
-  • <strong>er-prajapat/bytechef</strong>: Extensible low-code workflow automation & API integration platform.
-  • <strong>er-prajapat/tf-test</strong>: Declarative Terraform Infrastructure as Code test modules.
-  • <strong>er-prajapat/angular-formio</strong>: JSON-schema powered dynamic form engine for Angular.
-  • <strong>er-prajapat/er-prajapat.github.io</strong>: High-performance portfolio website source.`,
+  • <strong>bharatprajapat-eng/ai-labs</strong>: Coding agent skills & AI-Augmented Trunk Flow strategy.
+  • <strong>bharatprajapat-eng/AI-models</strong>: PyTorch neural text generation pipeline with Docker containerization.
+  • <strong>bharatprajapat-eng/bytechef</strong>: Extensible low-code workflow automation & API integration platform.
+  • <strong>bharatprajapat-eng/tf-test</strong>: Declarative Terraform Infrastructure as Code test modules.
+  • <strong>bharatprajapat-eng/angular-formio</strong>: JSON-schema powered dynamic form engine for Angular.
+  • <strong>bharatprajapat-eng/bharatprajapat-eng.github.io</strong>: High-performance portfolio website source.`,
 
     contact: `Contact Information:
   • <strong>Email:</strong> bharat.p2311@gmail.com
-  • <strong>GitHub:</strong> https://github.com/er-prajapat
-  • <strong>Website:</strong> https://er-prajapat.github.io
+  • <strong>GitHub:</strong> https://github.com/bharatprajapat-eng
+  • <strong>Website:</strong> https://bharatprajapat-eng.github.io
   • <strong>Location:</strong> Surat, Gujarat, India (Open to Remote / Global Consulting)`,
 
     principles: `Engineering Tenets:

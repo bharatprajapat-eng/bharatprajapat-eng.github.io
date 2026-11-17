@@ -1,7 +1,7 @@
 # Bharat Prajapat · Portfolio Hub & Architecture Showcase
 
 > **Cloud, DevOps & Platform Engineer · Solution Architect · AI-Assisted Infrastructure Automation**  
-> 🌐 **Live Website:** [https://er-prajapat.github.io/](https://er-prajapat.github.io/)
+> 🌐 **Live Website:** [https://bharatprajapat-eng.github.io/](https://bharatprajapat-eng.github.io/)
 
 ---
 
@@ -18,4 +18,4 @@ This is the personal engineering portfolio, architecture showcase, and project h
 ---
 
 ## 🚀 Deployed on GitHub Pages
-This site is continuously deployed from the `main` branch to **[https://er-prajapat.github.io/](https://er-prajapat.github.io/)**.
+This site is continuously deployed from the `main` branch to **[https://bharatprajapat-eng.github.io/](https://bharatprajapat-eng.github.io/)**.
