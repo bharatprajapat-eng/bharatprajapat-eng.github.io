@@ -3,49 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharat Prajapat | Full-Stack & AI Systems Engineer</title>
-  <meta name="description" content="Portfolio of Bharat Prajapat — Full-Stack & AI Systems Engineer specializing in Autonomous AI Agents, Machine Learning, Cloud Infrastructure, and Full-Stack Web Applications." />
-  <meta name="author" content="Bharat Prajapat" />
 
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bharat Prajapat | Portfolio" />
-  <meta property="og:description" content="Full-Stack & AI Systems Engineer | Autonomous Agents, PyTorch, Cloud Infrastructure & Full-Stack Apps." />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/24315782?v=4" />
+  <title>Bharat Prajapat · Cloud, DevOps & Platform Engineer · Solution Architect</title>
+  <meta name="description" content="Bharat Prajapat is a Cloud, DevOps & Platform Engineer and Solution Architect specializing in Multi-Cloud Infrastructure (Azure, GCP, AWS), Kubernetes, Terraform, GitOps, and AI-driven infrastructure automation. Former full-stack engineer." />
+  <meta name="author" content="Bharat Prajapat" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://er-prajapat.github.io/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Bharat Prajapat" />
+  <meta property="og:title" content="Bharat Prajapat · Cloud, DevOps & Platform Engineer" />
+  <meta property="og:description" content="Multi-Cloud Solution Architecture (Azure, GCP, AWS) · Kubernetes & GitOps · Terraform · AI-Assisted DevOps Automation." />
   <meta property="og:url" content="https://er-prajapat.github.io/" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/24315782?v=4" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☸️</text></svg>" />
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- CSS Stylesheet -->
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bharat Prajapat",
+    "url": "https://er-prajapat.github.io/",
+    "image": "https://avatars.githubusercontent.com/u/24315782?v=4",
+    "jobTitle": "Cloud, DevOps & Platform Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surat",
+      "addressRegion": "Gujarat",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/er-prajapat"
+    ],
+    "knowsAbout": [
+      "Cloud Architecture", "Platform Engineering", "Kubernetes", "Azure", "Google Cloud", 
+      "AWS", "Terraform", "GitOps", "Argo CD", "Docker", "DevOps Automation", 
+      "AI Coding Agents", "Observability", "Datadog", "OpenTelemetry"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header / Navigation -->
+
+  <!-- Navigation Bar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="brand-logo">
+      <a href="#overview" class="brand-logo" aria-label="Bharat Prajapat Home">
         <span class="brand-bracket">&lt;</span>
         <span class="brand-name">BP</span>
         <span class="brand-bracket">/&gt;</span>
       </a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#architecture" class="nav-link">Workflow</a>
+        <a href="#overview" class="nav-link">Overview</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#case-studies" class="nav-link">Case Studies</a>
+        <a href="#projects" class="nav-link">Open Source</a>
+        <a href="#arsenal" class="nav-link">Skills</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -56,7 +88,7 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -68,7 +100,7 @@
           <span>GitHub</span>
         </a>
 
-        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open mobile menu">
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
@@ -77,15 +109,17 @@
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
+  <!-- Main Container -->
+  <main id="main">
+
+    <!-- Hero / Overview Section -->
+    <section class="hero-section" id="overview">
       <div class="hero-glow"></div>
       <div class="container hero-content">
+        
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          <span>Full-Stack &amp; AI Systems Engineer</span>
+          <span>Open to Cloud Architecture, Platform Engineering &amp; AI-DevOps Consulting</span>
         </div>
 
         <div class="hero-profile-row">
@@ -97,459 +131,991 @@
             />
             <div class="avatar-ring"></div>
           </div>
+          
           <div class="hero-title-box">
-            <h1 class="hero-name">Hi, I'm <span class="gradient-text">Bharat Prajapat</span></h1>
-            <p class="hero-subtitle">
-              Architecting autonomous AI agent systems, deep learning workflows, scalable cloud infrastructure, and modern web applications.
+            <h1 class="hero-name">Bharat Prajapat</h1>
+            <p class="hero-role-title">Cloud, DevOps &amp; Platform Engineer <span class="divider-dot">•</span> Solution Architect</p>
+            <p class="hero-headline">
+              Multi-Cloud Architecture (Azure, GCP, AWS) <span class="divider-slash">/</span> Kubernetes &amp; GitOps <span class="divider-slash">/</span> Reusable Terraform <span class="divider-slash">/</span> AI-Driven Infrastructure Automation
             </p>
           </div>
         </div>
 
+        <p class="hero-bio">
+          I am a multidisciplinary engineer whose career evolved from hands-on software development and web hosting into cloud infrastructure, Kubernetes operations, enterprise platform engineering, and AI-assisted DevOps. My strongest capability is understanding an engineering or business problem end to end, designing a pragmatic technical architecture, establishing a working implementation, and standardizing it for team-scale adoption.
+        </p>
+
+        <!-- CTA Buttons -->
         <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-primary">
-            <span>Explore Projects</span>
+          <a href="#case-studies" class="btn btn-primary">
+            <span>Explore Case Studies</span>
             <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          <a href="#contact" class="btn btn-secondary">
+          <a href="#experience" class="btn btn-secondary">
+            <span>View Career Journey</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
             <span>Get in Touch</span>
           </a>
-          <a href="https://github.com/er-prajapat" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>GitHub Profile</span>
-          </a>
         </div>
 
-        <div class="hero-highlights">
-          <div class="highlight-item">
-            <span class="highlight-num">AI Agents</span>
-            <span class="highlight-label">Skills &amp; Multi-Agent Workflows</span>
+        <!-- Metric / Impact Highlights -->
+        <div class="hero-metrics">
+          <div class="metric-card glass-panel">
+            <div class="metric-number">9+ Years</div>
+            <div class="metric-label">Engineering Evolution</div>
+            <div class="metric-detail">From web &amp; mobile development to multi-cloud platform leadership</div>
           </div>
-          <div class="highlight-item">
-            <span class="highlight-num">Deep Learning</span>
-            <span class="highlight-label">PyTorch &amp; Dockerized Models</span>
+          <div class="metric-card glass-panel">
+            <div class="metric-number">500+</div>
+            <div class="metric-label">Services Architecture</div>
+            <div class="metric-detail">Universal CI/CD templates &amp; Gateway API modernization scope</div>
           </div>
-          <div class="highlight-item">
-            <span class="highlight-num">DevOps &amp; IaC</span>
-            <span class="highlight-label">Terraform, Docker &amp; CI/CD</span>
+          <div class="metric-card glass-panel">
+            <div class="metric-number">Multi-Cloud</div>
+            <div class="metric-label">Azure, GCP, AWS &amp; On-Prem</div>
+            <div class="metric-detail">AKS, GKE, EKS, vSphere &amp; cross-cloud private connectivity</div>
           </div>
-          <div class="highlight-item">
-            <span class="highlight-num">Full-Stack</span>
-            <span class="highlight-label">Python, Angular &amp; API Integrations</span>
+          <div class="metric-card glass-panel">
+            <div class="metric-number">AI + GitOps</div>
+            <div class="metric-label">Autonomous Workflows</div>
+            <div class="metric-detail">Multi-agent support with deterministic gates &amp; human review</div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about-section" id="about">
+    <!-- Career Experience Section -->
+    <section class="section" id="experience">
       <div class="container">
+        
         <div class="section-header">
-          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
-          <p class="section-subtitle">Engineering systems at the intersection of AI autonomy, cloud infrastructure, and software craft.</p>
+          <div class="section-tag">Career Milestones</div>
+          <h2 class="section-title">Professional <span class="gradient-text">Journey &amp; Roles</span></h2>
+          <p class="section-subtitle">A progressive trajectory spanning enterprise platform modernization, healthcare compliance, high-scale e-commerce, SaaS startups, and software engineering foundations.</p>
         </div>
 
-        <div class="about-grid">
-          <div class="about-card glass-panel">
-            <div class="about-icon">🤖</div>
-            <h3>Autonomous AI Engineering</h3>
-            <p>
-              I build and refine cutting-edge tooling for human-AI collaborative workflows. From multi-agent orchestration frameworks like CrewAI to automated skill deployment across Cursor, Claude Code, and Antigravity, I engineer repeatable, production-grade AI agent systems.
-            </p>
+        <div class="timeline">
+          
+          <!-- Role 1: Pearl Technology -->
+          <div class="timeline-item">
+            <div class="timeline-marker current"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">Nov 2024 – Present</div>
+                  <h3 class="role-title">Enterprise Platform Modernization &amp; Platform Architecture</h3>
+                  <div class="company-name">Pearl Technology <span class="location-tag">• Hybrid / Multi-Cloud</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Initiated platform modernization, designed architecture and working proofs of concept, and collaborated across cross-functional teams for a large-scale enterprise logistics platform comprising microservices, microfrontends, and event-driven data streaming.
+              </p>
+              <ul class="role-bullets">
+                <li><strong>Universal CI/CD at Scale (500+ Services):</strong> Designed centralized CI/CD templates reducing repetitive pipeline setup across hundreds of microservices (.NET, Node.js, Python, Angular, React).</li>
+                <li><strong>Multi-Agent DevOps Support:</strong> Created AI-assisted support workflows integrating Zendesk webhooks, Augment Cosmos, and GitHub context to prepare CI/CD pull requests with human-in-the-loop Slack approval.</li>
+                <li><strong>Azure-to-GCP Enterprise Migration:</strong> Architected infrastructure translation from Azure to Google Cloud: AKS to GKE, Workload Identity Federation (eliminating static JSON keys), and PostgreSQL to AlloyDB continuous replication via Google Cloud Database Migration Service.</li>
+                <li><strong>On-Premises Kubernetes:</strong> Built an on-premises VMware vSphere Kubernetes platform integrating Airflow, Kafka, and Elasticsearch to lower development cloud costs while maintaining production parity.</li>
+                <li><strong>GitOps &amp; Gateway API:</strong> Standardized releases with Argo CD and Helm charts; designed an AI-assisted classification and migration approach for 500+ NGINX Ingress rules to Kubernetes Gateway API (HTTPRoute).</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">GKE</span>
+                <span class="tag">AKS</span>
+                <span class="tag">Terraform Modules</span>
+                <span class="tag">Argo CD</span>
+                <span class="tag">AlloyDB</span>
+                <span class="tag">Workload Identity</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">AI Agents</span>
+              </div>
+            </div>
           </div>
 
-          <div class="about-card glass-panel">
-            <div class="about-icon">🧠</div>
-            <h3>Machine Learning &amp; Deep Learning</h3>
-            <p>
-              Hands-on experience developing and deploying deep learning pipelines in PyTorch, including text generation models and neural networks. I focus on containerizing models with Docker for low-latency, scalable inference.
-            </p>
+          <!-- Role 2: PSK Technology -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">July 2023 – Oct 2024</div>
+                  <h3 class="role-title">Cloud Infrastructure &amp; DevOps Engineer</h3>
+                  <div class="company-name">PSK Technology <span class="location-tag">• Healthcare Platform</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Operated cloud infrastructure and automated delivery pipelines for a mission-critical Healthcare Insurance Validation Platform used by hospitals to verify treatment eligibility via health insurance APIs.
+              </p>
+              <ul class="role-bullets">
+                <li>Managed private Azure Kubernetes Service (AKS) clusters, capacity planning, node pool maintenance, and safe upgrades.</li>
+                <li>Built continuous integration and deployment pipelines using <strong>GitHub Actions</strong> for Python-based microservices.</li>
+                <li>Maintained platform services within Azure including Key Vault, Private Link, Load Balancers, and Storage Accounts.</li>
+                <li>Triaged and resolved production incidents using Kubernetes pod events and centralized <strong>Elasticsearch</strong> logs to rapidly distinguish infrastructure faults from application defects.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">Azure AKS</span>
+                <span class="tag">Python Microservices</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">Elasticsearch</span>
+                <span class="tag">Key Vault</span>
+                <span class="tag">Healthcare APIs</span>
+              </div>
+            </div>
           </div>
 
-          <div class="about-card glass-panel">
-            <div class="about-icon">☁️</div>
-            <h3>Cloud &amp; Infrastructure as Code</h3>
-            <p>
-              Passionate about declarative infrastructure with Terraform, multi-tier containerized environments using Docker &amp; Compose, and automated Git-driven CI/CD pipelines that enforce quality gates before deployment.
-            </p>
+          <!-- Role 3: The Global Logica -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">Jan 2022 – June 2023</div>
+                  <h3 class="role-title">Technical Architect &amp; Core Backend Lead</h3>
+                  <div class="company-name">The Global Logica Software Technologies <span class="location-tag">• Multi-Vendor E-Commerce</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Led technical system design and hands-on core implementation of a scalable multi-vendor e-commerce platform from the ground up, coordinating core developers and external design specialists.
+              </p>
+              <ul class="role-bullets">
+                <li><strong>Monolith to Microservices Evolution:</strong> Transitioned monolithic backend workloads into decomposed services (Cart, Account, Orders, Payments) running in Kubernetes with Horizontal Pod Autoscaling to isolate transactional services from high-volume catalog browsing.</li>
+                <li><strong>Core Domain Engineering:</strong> Personally developed key backend domains: order workflows, SKU inventory tracking, vendor payouts, automated invoicing, and Razorpay integration.</li>
+                <li><strong>High-Speed Product Discovery:</strong> Integrated Elasticsearch synchronized on product data mutations for instant search and optimized image delivery with Cloudflare CDN caching.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">Laravel Microservices</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Elasticsearch</span>
+                <span class="tag">React Native</span>
+                <span class="tag">Cloudflare</span>
+                <span class="tag">Razorpay</span>
+              </div>
+            </div>
           </div>
 
-          <div class="about-card glass-panel">
-            <div class="about-icon">⚡</div>
-            <h3>API Integration &amp; Web Platforms</h3>
-            <p>
-              Extensive work integrating enterprise APIs, automation backends (ByteChef, Nango), and building dynamic frontend architectures with Angular and modern JavaScript/TypeScript.
-            </p>
+          <!-- Role 4: Mandatly -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">March 2019 – Dec 2021</div>
+                  <h3 class="role-title">DevOps Engineer</h3>
+                  <div class="company-name">Mandatly <span class="location-tag">• Privacy &amp; Compliance SaaS</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Pioneered cloud operations, automated deployment, and scalable architecture for a SaaS platform delivering GDPR, CCPA, and DSAR compliance automation.
+              </p>
+              <ul class="role-bullets">
+                <li><strong>Automated Delivery:</strong> Transformed manual weekly IIS releases into zero-downtime Azure DevOps CI/CD pipelines, containerized .NET Core and Angular workloads, and deployed to Kubernetes.</li>
+                <li><strong>Edge Consent Ingestion:</strong> Designed and implemented an edge capture architecture using <strong>Cloudflare Workers and KV</strong> to buffer millions of consent banner events, offloading intense database I/O to scheduled Kubernetes background processors.</li>
+                <li><strong>Multi-Region Data Architecture:</strong> Built Terraform provisioning pipelines for tenant-isolated regional storage and European database compliance requirements.</li>
+                <li>Deployed self-hosted Elasticsearch &amp; Kibana to centralize platform audit logs while managing cloud log ingestion costs.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">Azure DevOps</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Cloudflare Workers &amp; KV</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">.NET Core</span>
+                <span class="tag">Angular</span>
+                <span class="tag">Elasticsearch</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Role 5: Freelance & Client Solutions -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">Concurrent / Ongoing</div>
+                  <h3 class="role-title">Solutions Architect &amp; Cloud Consultant</h3>
+                  <div class="company-name">Freelance Engagements <span class="location-tag">• AWS, Observability &amp; AI</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Architected and deployed production solutions for specialized client needs, including coordinating distributed engineering teams and implementing deep observability.
+              </p>
+              <ul class="role-bullets">
+                <li><strong>TeraCar (Cab Platform):</strong> Implemented comprehensive SRE observability using Datadog, OpenTelemetry Operator, and Jaeger distributed tracing; diagnosed and resolved complex downstream microservice latency bottlenecks.</li>
+                <li><strong>AI Application Platform:</strong> Architected migration of a Python multi-agent AI system from VMs to Azure Kubernetes Service (AKS), decoupling agent orchestration runtimes from Azure OpenAI managed inference endpoints.</li>
+                <li><strong>AWS Cloud Delivery:</strong> Designed and implemented AWS ECS and EKS architectures, API Gateway, Amazon RDS, and CodeBuild/CodeDeploy pipelines for high-traffic food and water delivery applications.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">AWS EKS / ECS</span>
+                <span class="tag">Datadog</span>
+                <span class="tag">OpenTelemetry</span>
+                <span class="tag">Jaeger</span>
+                <span class="tag">Azure OpenAI</span>
+                <span class="tag">Terraform</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 6: Early Career Foundations -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-period-badge">2014 – 2019</div>
+                  <h3 class="role-title">Software Developer &amp; Webmaster Foundations</h3>
+                  <div class="company-name">The Techminors &amp; Bhagwan Mahaveer College <span class="location-tag">• Surat, India</span></div>
+                </div>
+              </div>
+              <p class="role-summary">
+                Built an unshakeable full-stack foundation: from C, PHP, and MySQL to cross-platform mobile apps (Ionic/Angular), server administration (cPanel, Apache, Nginx, DNS, VPS), CCTV networking, and IoT hardware robotics.
+              </p>
+              <ul class="role-bullets">
+                <li>Developed 10+ commercial web applications, booking portals, and insurance assessment systems.</li>
+                <li>Built cross-platform mobile applications with Ionic, Angular, Firestore, and Razorpay integrations.</li>
+                <li>Engineered an Arduino-based robotics tank with a 360-degree turret controlled via Bluetooth and a web interface.</li>
+                <li>Hands-on virtualization experiments with VMware, BackTrack/Parrot OS, and networking fundamentals.</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">PHP / Laravel</span>
+                <span class="tag">Angular / Ionic</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Linux / Nginx</span>
+                <span class="tag">Networking &amp; DNS</span>
+                <span class="tag">C / C++</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="section skills-section" id="skills">
+    <!-- Architecture Case Studies Section -->
+    <section class="section bg-subtle" id="case-studies">
       <div class="container">
+        
         <div class="section-header">
-          <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
-          <p class="section-subtitle">Technologies and methodologies I rely on to turn ideas into robust software systems.</p>
+          <div class="section-tag">Deep-Dive Engineering</div>
+          <h2 class="section-title">Selected <span class="gradient-text">Architecture Case Studies</span></h2>
+          <p class="section-subtitle">Real-world architectural problems, technical strategies, and implementation outcomes.</p>
         </div>
 
-        <div class="skills-grid">
-          <!-- Skill Group 1 -->
-          <div class="skill-category glass-panel">
-            <div class="skill-category-header">
-              <span class="category-icon">⚡</span>
-              <h3>AI &amp; Agentic Ecosystem</h3>
+        <div class="case-studies-grid">
+
+          <!-- Case Study 1 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">Enterprise Scale</div>
+            <h3 class="case-title">Universal CI/CD &amp; Multi-Agent DevOps Support</h3>
+            <div class="case-meta">Platform: Pearl Technology • Scale: 500+ Microservices &amp; Microfrontends</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>With hundreds of microservices across .NET, Node.js, Python, and Angular, engineering teams constantly flooded DevOps with manual requests for new pipelines, configuration drift, and CI fixes.</p>
             </div>
-            <div class="tag-cloud">
-              <span class="skill-tag">Coding Agents</span>
-              <span class="skill-tag">Multi-Agent Orchestration</span>
-              <span class="skill-tag">CrewAI</span>
-              <span class="skill-tag">Prompt Engineering</span>
-              <span class="skill-tag">Custom Agent Skills</span>
-              <span class="skill-tag">LLM Evaluation</span>
-              <span class="skill-tag">Semantic Linting</span>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Designed a parameterized Universal CI template paired with a centralized Continuous Delivery repository that auto-generates missing deployment configurations on first build. Introduced an AI support workflow (Zendesk webhook &rarr; Augment Cosmos with repository context &rarr; specialized agent preparing PRs &rarr; Slack notification for team review and approval).</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Agent reliability requires structured engineering context, defined limits, deterministic checks, and human review—not unconstrained autonomous execution.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Universal CI</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Multi-Agent AI</span>
+              <span class="tag">Augment Cosmos</span>
+              <span class="tag">Slack Gatekeeper</span>
             </div>
           </div>
 
-          <!-- Skill Group 2 -->
-          <div class="skill-category glass-panel">
-            <div class="skill-category-header">
-              <span class="category-icon">🧪</span>
-              <h3>Machine Learning &amp; Python</h3>
+          <!-- Case Study 2 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">Multi-Cloud Migration</div>
+            <h3 class="case-title">Enterprise Azure-to-GCP Platform Modernization</h3>
+            <div class="case-meta">Scope: AKS &rarr; GKE • PostgreSQL &rarr; AlloyDB • Workload Identity</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Transitioning critical enterprise infrastructure from Azure to Google Cloud without downtime, eliminating fragile static credential files, and continuously replicating active database state across cloud boundaries.</p>
             </div>
-            <div class="tag-cloud">
-              <span class="skill-tag">Python 3</span>
-              <span class="skill-tag">PyTorch</span>
-              <span class="skill-tag">NLP / Text Generation</span>
-              <span class="skill-tag">Neural Networks</span>
-              <span class="skill-tag">FastAPI</span>
-              <span class="skill-tag">Flask</span>
-              <span class="skill-tag">NumPy / Pandas</span>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Engineered reusable Terraform modules for GKE foundation. Established <strong>Workload Identity Federation for GKE</strong> to allow pods to securely impersonate Google Cloud service accounts with zero static JSON keys. Configured <strong>Google Cloud Database Migration Service (DMS)</strong> over secure cross-cloud VPN for continuous replication from Azure PostgreSQL to AlloyDB with minimal cutover interruption.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Translate architecture into the target platform's native primitives rather than forcing 1:1 legacy emulation.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">GKE</span>
+              <span class="tag">AlloyDB</span>
+              <span class="tag">Google Cloud DMS</span>
+              <span class="tag">Workload Identity</span>
+              <span class="tag">Terraform</span>
             </div>
           </div>
 
-          <!-- Skill Group 3 -->
-          <div class="skill-category glass-panel">
-            <div class="skill-category-header">
-              <span class="category-icon">🚢</span>
-              <h3>DevOps &amp; Infrastructure</h3>
+          <!-- Case Study 3 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">High-Throughput Edge</div>
+            <h3 class="case-title">Edge-Ingestion Pipeline for Privacy Compliance SaaS</h3>
+            <div class="case-meta">Platform: Mandatly • Focus: Database Protection &amp; Request Offloading</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Millions of user consent interactions across thousands of embedded customer websites generated massive spikes in synchronous API calls, exhausting database connection pools and inflating cloud I/O costs.</p>
             </div>
-            <div class="tag-cloud">
-              <span class="skill-tag">Terraform (IaC)</span>
-              <span class="skill-tag">Docker &amp; Compose</span>
-              <span class="skill-tag">Linux / Bash</span>
-              <span class="skill-tag">PowerShell</span>
-              <span class="skill-tag">Git Flow &amp; Trunk-Based</span>
-              <span class="skill-tag">GitHub Actions / CI/CD</span>
-              <span class="skill-tag">Nginx Reverse Proxy</span>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Architected an edge-ingestion layer using <strong>Cloudflare Workers &amp; Cloudflare KV</strong>. Consent selections are captured and acknowledged in sub-millisecond edge runs, buffered in KV, and ingested asynchronously into the core backend via scheduled Kubernetes batch workers.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Redesign the path a request takes through infrastructure rather than simply throwing expensive database compute at traffic spikes.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Cloudflare Workers</span>
+              <span class="tag">Cloudflare KV</span>
+              <span class="tag">Kubernetes Jobs</span>
+              <span class="tag">Async Ingestion</span>
+              <span class="tag">Cost Control</span>
             </div>
           </div>
 
-          <!-- Skill Group 4 -->
-          <div class="skill-category glass-panel">
-            <div class="skill-category-header">
-              <span class="category-icon">🌐</span>
-              <h3>Full-Stack &amp; Integrations</h3>
+          <!-- Case Study 4 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">Microservices</div>
+            <h3 class="case-title">E-Commerce Monolith Decomposition into Kubernetes</h3>
+            <div class="case-meta">Platform: The Global Logica • Architecture: Monolith &rarr; Microservices</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>A unified Laravel backend ran browsing, cart management, and payment processing under one compute roof. High browsing traffic and marketing campaigns threatened the stability of checkout and payment transactions.</p>
             </div>
-            <div class="tag-cloud">
-              <span class="skill-tag">TypeScript / JavaScript</span>
-              <span class="skill-tag">Angular</span>
-              <span class="skill-tag">RESTful APIs</span>
-              <span class="skill-tag">ByteChef Integration</span>
-              <span class="skill-tag">JSON Schema / Form.io</span>
-              <span class="skill-tag">HTML5 / CSS3</span>
-              <span class="skill-tag">Webhooks</span>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Decomposed critical transactional domains (Cart, Account, Orders, Invoicing, Vendor Payments) into dedicated microservices deployed to Kubernetes with Horizontal Pod Autoscaling (HPA). Shifted catalog browsing and search entirely to an Elasticsearch cluster synchronized on change events.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Isolate high-contention transactional boundaries from high-volume read workloads.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Kubernetes HPA</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Elasticsearch</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Order Pipeline</span>
             </div>
           </div>
+
+          <!-- Case Study 5 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">AI-Assisted Migration</div>
+            <h3 class="case-title">500+ NGINX Ingress to Kubernetes Gateway API</h3>
+            <div class="case-meta">Scope: 500+ Ingress Manifests &rarr; Gateway Fabric &amp; HTTPRoute</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Modernizing a sprawling enterprise routing topology of over 500 Ingress configurations with diverse custom annotations, rewrites, timeouts, and backend targets to the modern Kubernetes Gateway API.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Developed an AI-assisted analysis workflow to parse Ingress manifests, categorize routing complexity, generate candidate <strong>Gateway and HTTPRoute</strong> resources, run deterministic YAML and semantic validation checks, and output reviewable pull requests for engineering sign-off.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Use AI as a precision accelerator for repetitive syntax conversion while maintaining strict human-in-the-loop review.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Gateway API</span>
+              <span class="tag">HTTPRoute</span>
+              <span class="tag">NGINX Gateway Fabric</span>
+              <span class="tag">LLM Validation</span>
+              <span class="tag">Safe Migration</span>
+            </div>
+          </div>
+
+          <!-- Case Study 6 -->
+          <div class="case-card glass-panel">
+            <div class="case-badge">Observability &amp; SRE</div>
+            <h3 class="case-title">Distributed Tracing &amp; Latency Root-Cause Isolation</h3>
+            <div class="case-meta">Platform: TeraCar (Cab Platform) • Tooling: OpenTelemetry &amp; Jaeger</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Critical booking API endpoints reported erratic response latency despite healthy 200 HTTP statuses and normal CPU/memory utilization on the primary service pods.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Deployed the <strong>OpenTelemetry Operator</strong> for auto-instrumentation across Kubernetes pods and correlated Datadog infrastructure alerts with Jaeger distributed trace spans. Tracing isolated the latency not to the booking service itself, but to an unindexed query in an asynchronous downstream dependency.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>A healthy individual service does not guarantee a healthy end-to-end user transaction.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">OpenTelemetry</span>
+              <span class="tag">Jaeger</span>
+              <span class="tag">Datadog</span>
+              <span class="tag">Kubernetes Operator</span>
+              <span class="tag">Distributed Traces</span>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects-section" id="projects">
+    <!-- Open Source Projects Section -->
+    <section class="section" id="projects">
       <div class="container">
+        
         <div class="section-header">
-          <h2 class="section-title">Featured <span class="gradient-text">Open Source &amp; Projects</span></h2>
-          <p class="section-subtitle">Real code and active repositories from my GitHub workspace.</p>
+          <div class="section-tag">Public Work</div>
+          <h2 class="section-title">Open Source <span class="gradient-text">&amp; Developer Tooling</span></h2>
+          <p class="section-subtitle">Real code, agent workflows, containerized models, and automation frameworks on GitHub.</p>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1: AI Labs -->
+          
+          <!-- Repo 1: AI Labs -->
           <div class="project-card glass-panel">
-            <div class="project-header">
-              <div class="project-badge">Featured</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-top">
+              <div class="project-badge">Featured Workflow</div>
+              <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View ai-labs on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer">AI Labs: Coding Agent Skills</a>
+              <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer">AI Labs: Coding Agent Skills &amp; Workflows</a>
             </h3>
             <p class="project-desc">
-              Developer guidelines and automated skill configurations designed specifically for AI coding agents and human-AI collaborative environments. Features an AI-Augmented Trunk-Flow strategy and automated installer scripts across multiple agent targets.
+              Consolidated developer guidelines and automated skills designed for AI coding agents (Cursor, Claude Code, Antigravity, Gemini). Implements the <strong>AI-Augmented Trunk-Flow</strong> branching model combining rapid short-lived feature integration with semver release tags, conventional commits, and automated cross-agent installer scripts.
             </p>
             <div class="project-tags">
               <span class="tag">Shell</span>
-              <span class="tag">AI Agents</span>
-              <span class="tag">Git Workflow</span>
-              <span class="tag">Conventional Commits</span>
+              <span class="tag">AI Coding Agents</span>
+              <span class="tag">Trunk Flow</span>
+              <span class="tag">GitOps</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/ai-labs" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View on GitHub</span> &rarr;
+            </a>
           </div>
 
-          <!-- Project 2: AI-models -->
+          <!-- Repo 2: AI-models -->
           <div class="project-card glass-panel">
-            <div class="project-header">
+            <div class="project-top">
               <div class="project-badge">Deep Learning</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+              <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View AI-models on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer">Neural Text Generator &amp; Models</a>
+              <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer">Neural Text Generator &amp; Containerized Models</a>
             </h3>
             <p class="project-desc">
-              Custom deep learning text generation system implemented with PyTorch. Features model serialization, custom vocabulary tokenization, containerized Docker deployment, and web interface for interactive inference.
+              PyTorch deep learning text generation pipeline complete with custom vocabulary tokenization, serialized model checkpoints (model_state.pth), Dockerfile containerization, REST API inference server, and web frontend UI for interactive text exploration.
             </p>
             <div class="project-tags">
               <span class="tag">Python</span>
               <span class="tag">PyTorch</span>
               <span class="tag">Docker</span>
+              <span class="tag">Flask</span>
               <span class="tag">NLP</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/AI-models" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View on GitHub</span> &rarr;
+            </a>
           </div>
 
-          <!-- Project 3: ByteChef -->
+          <!-- Repo 3: ByteChef -->
           <div class="project-card glass-panel">
-            <div class="project-header">
-              <div class="project-badge">Automation</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-top">
+              <div class="project-badge">Automation Platform</div>
+              <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View bytechef on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer">ByteChef Integration Platform</a>
+              <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer">ByteChef: Workflow Automation &amp; Integration</a>
             </h3>
             <p class="project-desc">
-              Open-source, extensible API integration &amp; workflow automation engine. Designed to seamlessly connect complex enterprise products with external APIs and automation trigger loops.
+              Open-source, low-code, extendable API integration and workflow automation platform. Enables seamless integration between SaaS products and any third-party API ecosystem with enterprise security and microservices reliability.
             </p>
             <div class="project-tags">
               <span class="tag">Java</span>
-              <span class="tag">Workflows</span>
+              <span class="tag">Workflow Automation</span>
               <span class="tag">API Integration</span>
-              <span class="tag">Low-Code</span>
+              <span class="tag">Enterprise</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/bytechef" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View on GitHub</span> &rarr;
+            </a>
           </div>
 
-          <!-- Project 4: tf-test -->
+          <!-- Repo 4: tf-test -->
           <div class="project-card glass-panel">
-            <div class="project-header">
-              <div class="project-badge">Infrastructure</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-top">
+              <div class="project-badge">Cloud IaC</div>
+              <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View tf-test on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer">Terraform Cloud Automation</a>
+              <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer">Terraform Cloud Automation Lab</a>
             </h3>
             <p class="project-desc">
-              Terraform modules and declarative cloud infrastructure configurations. Demonstrating infrastructure-as-code principles, state management, and reproducible environment provisioning.
+              Declarative Infrastructure as Code (IaC) modules and test harnesses. Practicing automated provisioning, remote state management, and multi-environment foundation templates across cloud providers.
             </p>
             <div class="project-tags">
               <span class="tag">HCL</span>
               <span class="tag">Terraform</span>
-              <span class="tag">Cloud IaC</span>
+              <span class="tag">Cloud Architecture</span>
               <span class="tag">DevOps</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/tf-test" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View on GitHub</span> &rarr;
+            </a>
           </div>
 
-          <!-- Project 5: Angular Formio -->
+          <!-- Repo 5: angular-formio -->
           <div class="project-card glass-panel">
-            <div class="project-header">
-              <div class="project-badge">Frontend</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-top">
+              <div class="project-badge">Frontend Engine</div>
+              <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View angular-formio on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer">Angular JSON Form Engine</a>
+              <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer">Angular JSON-Powered Form Engine</a>
             </h3>
             <p class="project-desc">
-              Dynamic JSON-powered form generator and renderer for Angular applications, supporting real-time validation, multi-step wizards, and custom form schemas.
+              Dynamic schema-driven form rendering library for Angular. Generates and validates complex enterprise input forms, multistep wizards, and conditional field workflows directly from JSON schema payloads.
             </p>
             <div class="project-tags">
               <span class="tag">Angular</span>
               <span class="tag">TypeScript</span>
               <span class="tag">JSON Schema</span>
+              <span class="tag">Forms</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/angular-formio" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View on GitHub</span> &rarr;
+            </a>
           </div>
 
-          <!-- Project 6: GitHub Portfolio (Self) -->
+          <!-- Repo 6: Portfolio / Hub -->
           <div class="project-card glass-panel">
-            <div class="project-header">
-              <div class="project-badge">Web</div>
-              <div class="project-links">
-                <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer" class="project-icon-link" aria-label="GitHub Repo">
-                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-top">
+              <div class="project-badge">Live Hub</div>
+              <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer" class="project-link-icon" aria-label="View portfolio source on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
             </div>
             <h3 class="project-title">
-              <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer">Portfolio &amp; Showcase</a>
+              <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer">Engineer Portfolio &amp; Architecture Hub</a>
             </h3>
             <p class="project-desc">
-              High-performance, zero-dependency developer portfolio built with modern responsive CSS, theme toggle, and GitHub Pages continuous deployment.
+              High-performance, zero-framework portfolio hosted on GitHub Pages. Features dark/light theme switching, interactive terminal simulator, deep-dive case studies, and responsive design with 100/100 Lighthouse speed.
             </p>
             <div class="project-tags">
-              <span class="tag">HTML5</span>
-              <span class="tag">Modern CSS</span>
-              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">Vanilla JS</span>
               <span class="tag">GitHub Pages</span>
+              <span class="tag">SPA / SEO</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                <span>View Repository</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
+            <a href="https://github.com/er-prajapat/er-prajapat.github.io" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              <span>View Source</span> &rarr;
+            </a>
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Architecture & Workflow Section -->
-    <section class="section workflow-section" id="architecture">
+    <!-- Technical Arsenal / Skills Section -->
+    <section class="section bg-subtle" id="arsenal">
       <div class="container">
+        
         <div class="section-header">
-          <h2 class="section-title">Engineering <span class="gradient-text">Philosophy &amp; Workflow</span></h2>
-          <p class="section-subtitle">How I build software: rigorous workflows designed for high-velocity and AI collaboration.</p>
+          <div class="section-tag">Competencies</div>
+          <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+          <p class="section-subtitle">Real-world hands-on exposure and architectural competence across the modern cloud and software landscape.</p>
         </div>
 
-        <div class="workflow-card glass-panel">
-          <div class="workflow-grid">
-            <div class="workflow-step">
-              <div class="step-badge">01</div>
-              <h4>AI-Augmented Trunk-Flow</h4>
-              <p>Short-lived feature branches (< 1-2 days) merged into continuous integration staging, deploying to production exclusively via semver tags.</p>
+        <div class="arsenal-grid">
+          
+          <!-- Category 1 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">☁️</span>
+              <h3>Cloud &amp; Hybrid Infrastructure</h3>
             </div>
-            <div class="workflow-step">
-              <div class="step-badge">02</div>
-              <h4>Automated AI Quality Gates</h4>
-              <p>Before merge, code passes through automated linting, test suites, and LLM semantic validation to ensure rock-solid quality.</p>
-            </div>
-            <div class="workflow-step">
-              <div class="step-badge">03</div>
-              <h4>Conventional Standards</h4>
-              <p>Strict adhereance to standardized commit specifications, semantic versioning, and clean reproducible infrastructure configurations.</p>
+            <div class="arsenal-tags">
+              <span class="tag">Microsoft Azure</span>
+              <span class="tag">Google Cloud (GCP)</span>
+              <span class="tag">Amazon Web Services (AWS)</span>
+              <span class="tag">Cloudflare (CDN/Workers/KV/Tunnels)</span>
+              <span class="tag">VMware vSphere</span>
+              <span class="tag">Private Links &amp; Cross-Cloud VPN</span>
             </div>
           </div>
+
+          <!-- Category 2 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">☸️</span>
+              <h3>Kubernetes &amp; Containers</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">Azure Kubernetes Service (AKS)</span>
+              <span class="tag">Google Kubernetes Engine (GKE)</span>
+              <span class="tag">AWS EKS</span>
+              <span class="tag">On-Premises Kubernetes</span>
+              <span class="tag">Docker &amp; ACR / Artifact Registry</span>
+              <span class="tag">KEDA Autoscaling</span>
+              <span class="tag">Pod Disruption Budgets (PDB)</span>
+              <span class="tag">Cluster Upgrades &amp; Node Pools</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">🏗️</span>
+              <h3>IaC &amp; GitOps</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">Terraform (Reusable Modules)</span>
+              <span class="tag">Terraform Foundation Repositories</span>
+              <span class="tag">Argo CD</span>
+              <span class="tag">Helm Charts &amp; Values</span>
+              <span class="tag">ARM Templates</span>
+              <span class="tag">State Management &amp; Drift Detection</span>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">🚀</span>
+              <h3>CI/CD &amp; DevSecOps</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Azure DevOps Pipelines</span>
+              <span class="tag">Universal CI Templates (500+ Svcs)</span>
+              <span class="tag">Workload Identity Federation</span>
+              <span class="tag">Azure Key Vault</span>
+              <span class="tag">Azure App Configuration</span>
+              <span class="tag">Entra ID &amp; OIDC</span>
+              <span class="tag">Least-Privilege RBAC</span>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">🤖</span>
+              <h3>AI &amp; Agentic Automation</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">AI Coding Agents (Cursor, Claude, Antigravity)</span>
+              <span class="tag">Augment Cosmos</span>
+              <span class="tag">Zendesk / Slack / GitHub Agent Loops</span>
+              <span class="tag">CrewAI Multi-Agent Systems</span>
+              <span class="tag">Azure OpenAI Platform Runtimes</span>
+              <span class="tag">Semantic Validation &amp; Quality Gates</span>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">📊</span>
+              <h3>Observability &amp; SRE</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">Datadog</span>
+              <span class="tag">Elasticsearch &amp; Kibana (ELK)</span>
+              <span class="tag">OpenTelemetry Operator</span>
+              <span class="tag">Jaeger Distributed Tracing</span>
+              <span class="tag">Prometheus &amp; Grafana</span>
+              <span class="tag">Azure Monitor &amp; Log Analytics</span>
+            </div>
+          </div>
+
+          <!-- Category 7 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">🗄️</span>
+              <h3>Databases &amp; Event Streaming</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Google Cloud AlloyDB</span>
+              <span class="tag">Google Cloud DMS</span>
+              <span class="tag">Confluent Kafka</span>
+              <span class="tag">Apache Airflow</span>
+              <span class="tag">MongoDB Atlas</span>
+              <span class="tag">Microsoft SQL Server</span>
+              <span class="tag">Firebase / Firestore</span>
+            </div>
+          </div>
+
+          <!-- Category 8 -->
+          <div class="arsenal-card glass-panel">
+            <div class="arsenal-header">
+              <span class="arsenal-icon">🌐</span>
+              <h3>Networking, Gateways &amp; Software</h3>
+            </div>
+            <div class="arsenal-tags">
+              <span class="tag">Kubernetes Gateway API</span>
+              <span class="tag">NGINX Ingress &amp; Gateway Fabric</span>
+              <span class="tag">KrakenD API Gateway</span>
+              <span class="tag">Python (FastAPI, Flask)</span>
+              <span class="tag">PHP / Laravel</span>
+              <span class="tag">Angular &amp; TypeScript</span>
+              <span class="tag">Bash &amp; PowerShell</span>
+              <span class="tag">DNS &amp; Cloudflare Tunnels</span>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
+    <!-- Engineering Philosophy Section -->
+    <section class="section" id="philosophy">
       <div class="container">
+        
         <div class="section-header">
+          <div class="section-tag">Core Tenets</div>
+          <h2 class="section-title">How I Think <span class="gradient-text">About Engineering</span></h2>
+          <p class="section-subtitle">Seven foundational principles refined through years of building products, scaling platforms, and automating infrastructure.</p>
+        </div>
+
+        <div class="philosophy-grid">
+          
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">01</div>
+            <h4>Start with the real problem.</h4>
+            <p>Understand business, operational, and compliance constraints before choosing a technology. The right answer for an MVP is rarely the right answer for an enterprise platform serving high concurrency.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">02</div>
+            <h4>Scale the application, not just the machines.</h4>
+            <p>Resource-efficient database queries, sensible API boundaries, caching, asynchronous workflows, and well-designed data paths matter as much as autoscaling infrastructure.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">03</div>
+            <h4>Cost and reliability belong in architecture decisions.</h4>
+            <p>A system must deliver the required uptime and customer experience without runaway infrastructure spend. Design for how operational costs evolve as adoption grows.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">04</div>
+            <h4>Standardize before automating.</h4>
+            <p>Reusable Terraform modules, universal CI templates, Helm charts, and GitOps repositories create the essential foundations required for reliable automation to succeed.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">05</div>
+            <h4>Prove an idea before scaling it.</h4>
+            <p>Begin with a working proof of concept, validate the core assumptions against real traffic or telemetry, and collaborate with engineering teams for broader rollout.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">06</div>
+            <h4>Make AI accountable to engineering controls.</h4>
+            <p>Agents must ask for missing details, operate within strict repository conventions, raise structured pull requests, undergo deterministic linting, and retain human approval before touching production.</p>
+          </div>
+
+          <div class="philosophy-card glass-panel">
+            <div class="phil-num">07</div>
+            <h4>Respect operational ownership.</h4>
+            <p>Architecture, application delivery, platform SRE, and enterprise networking often belong to different teams. Design with clean boundaries and work closely with system owners.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Terminal Simulator -->
+    <section class="section bg-subtle" id="terminal-section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">Interactive CLI</div>
+          <h2 class="section-title">Developer <span class="gradient-text">Console</span></h2>
+          <p class="section-subtitle">Interact with my engineering profile via terminal commands. Try typing <code>help</code>, <code>skills</code>, <code>journey</code>, or <code>contact</code>.</p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">bharat@platform-eng: ~ (sh)</div>
+            <div class="terminal-actions">
+              <button id="termClear" class="term-btn" title="Clear console">clear</button>
+            </div>
+          </div>
+          
+          <div class="terminal-body" id="termOutput">
+            <div class="term-line welcome-line">
+              <span class="term-prompt">visitor@guest:~$</span> <span class="term-typed">welcome</span>
+            </div>
+            <div class="term-output">
+              Welcome to Bharat Prajapat's interactive terminal. Type <span class="cmd-highlight">help</span> to list available commands, or click the quick action pills below:
+            </div>
+          </div>
+
+          <div class="terminal-quick-actions">
+            <button class="pill-btn" data-cmd="help">help</button>
+            <button class="pill-btn" data-cmd="skills">skills</button>
+            <button class="pill-btn" data-cmd="journey">journey</button>
+            <button class="pill-btn" data-cmd="projects">projects</button>
+            <button class="pill-btn" data-cmd="contact">contact</button>
+          </div>
+
+          <form class="terminal-input-row" id="termForm">
+            <span class="term-prompt">visitor@guest:~$</span>
+            <input 
+              type="text" 
+              id="termInput" 
+              class="terminal-input" 
+              placeholder="type 'help' or any command..." 
+              autocomplete="off" 
+              spellcheck="false"
+            />
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">Let's Connect</div>
           <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
-          <p class="section-subtitle">Interested in collaborating on AI agents, machine learning, or software architecture? Let's connect.</p>
+          <p class="section-subtitle">Interested in discussing multi-cloud platform architecture, Kubernetes modernization, or AI-assisted infrastructure automation? Let's talk.</p>
         </div>
 
         <div class="contact-card glass-panel">
-          <div class="contact-info">
-            <h3>Let's build something extraordinary.</h3>
+          
+          <div class="contact-left">
+            <h3>Let's build reliable, cost-aware systems together.</h3>
             <p>
-              I'm always open to discussing new technical opportunities, innovative AI research, autonomous agent architectures, and open-source contributions.
+              Whether you are architecting a cloud migration, scaling Kubernetes workloads, introducing GitOps standards, or building guardrails for AI coding agents, I'm always open to discussing technical leadership and engineering collaboration.
             </p>
-            
-            <div class="contact-details">
-              <div class="contact-item">
-                <span class="contact-icon">📧</span>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <span class="c-icon">📧</span>
                 <div>
-                  <span class="contact-label">Email</span>
-                  <a href="mailto:bharat.p2311@gmail.com" class="contact-val">bharat.p2311@gmail.com</a>
+                  <div class="c-label">Direct Email</div>
+                  <a href="mailto:bharat.p2311@gmail.com" class="c-val">bharat.p2311@gmail.com</a>
                 </div>
               </div>
-              <div class="contact-item">
-                <span class="contact-icon">🐙</span>
+
+              <div class="contact-info-item">
+                <span class="c-icon">🐙</span>
                 <div>
-                  <span class="contact-label">GitHub</span>
-                  <a href="https://github.com/er-prajapat" target="_blank" rel="noopener noreferrer" class="contact-val">github.com/er-prajapat</a>
+                  <div class="c-label">GitHub</div>
+                  <a href="https://github.com/er-prajapat" target="_blank" rel="noopener noreferrer" class="c-val">github.com/er-prajapat</a>
                 </div>
               </div>
-              <div class="contact-item">
-                <span class="contact-icon">📍</span>
+
+              <div class="contact-info-item">
+                <span class="c-icon">📍</span>
                 <div>
-                  <span class="contact-label">Location / Domain</span>
-                  <span class="contact-val">er-prajapat.github.io</span>
+                  <div class="c-label">Location</div>
+                  <span class="c-val">Surat, Gujarat, India (Open to Remote &amp; Global Opportunities)</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="c-icon">🌐</span>
+                <div>
+                  <div class="c-label">Personal Website</div>
+                  <a href="https://er-prajapat.github.io" class="c-val">er-prajapat.github.io</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="contact-action-box">
-            <h4>Quick Message</h4>
-            <p>Feel free to send an email directly:</p>
-            <a href="mailto:bharat.p2311@gmail.com?subject=Hello%20Bharat%20-%20From%20Portfolio" class="btn btn-primary btn-block">
-              <span>Send Email</span>
-              <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            </a>
+          <div class="contact-right">
+            <div class="contact-box glass-panel">
+              <h4>Start a Conversation</h4>
+              <p>Ready to talk infrastructure, cloud migrations, or agentic automation?</p>
+              
+              <a href="mailto:bharat.p2311@gmail.com?subject=Inquiry%20from%20Portfolio%20-%20Bharat%20Prajapat" class="btn btn-primary btn-block">
+                <span>Send Direct Email</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </a>
+
+              <div class="contact-note">
+                ⚡ Typical response time: Within 24 hours.
+              </div>
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <p>&copy; <span id="currentYear"></span> Bharat Prajapat. Designed with precision &amp; hosted on GitHub Pages.</p>
+      <div class="footer-left">
+        <p>&copy; <span id="currentYear"></span> <strong>Bharat Prajapat</strong>. Engineered with precision &amp; hosted on GitHub Pages.</p>
+        <p class="footer-subtext">Cloud &amp; Platform Engineer • Multi-Cloud Solution Architect • AI-Assisted DevOps Automation</p>
+      </div>
       <div class="footer-links">
-        <a href="#hero">Back to top ↑</a>
-        <a href="https://github.com/er-prajapat" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        <a href="#overview">Back to Top ↑</a>
+        <a href="https://github.com/er-prajapat" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="mailto:bharat.p2311@gmail.com">Email</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>

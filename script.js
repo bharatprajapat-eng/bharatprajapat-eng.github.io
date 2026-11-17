@@ -1,4 +1,4 @@
-// Portfolio Interactive Logic for Bharat Prajapat
+// Interactive Logic for Bharat Prajapat's Portfolio Hub
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Current Year
@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Dark / Light Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const htmlEl = document.documentElement;
-  
-  // Check localStorage or system preference
+
   const savedTheme = localStorage.getItem('bp_theme');
   if (savedTheme) {
     htmlEl.setAttribute('data-theme', savedTheme);
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Mobile Navigation Menu Toggle
+  // 3. Mobile Navigation Menu
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('open');
     });
 
-    // Close mobile nav when clicking any link
     navLinks.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
@@ -45,12 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Active Navigation State on Scroll
+  // 4. Active Scroll Spy
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-link');
 
   const onScroll = () => {
-    const scrollPos = window.scrollY + 100;
+    const scrollPos = window.scrollY + 120;
 
     sections.forEach(sec => {
       const top = sec.offsetTop;
@@ -70,4 +68,127 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
+
+  // 5. Interactive Terminal Simulator
+  const termForm = document.getElementById('termForm');
+  const termInput = document.getElementById('termInput');
+  const termOutput = document.getElementById('termOutput');
+  const termClear = document.getElementById('termClear');
+  const pillBtns = document.querySelectorAll('.pill-btn');
+
+  const commandResponses = {
+    help: `Available commands:
+  • <span class="cmd-highlight">skills</span>       - List core technical competencies across cloud & platforms
+  • <span class="cmd-highlight">journey</span>      - View career milestone timeline
+  • <span class="cmd-highlight">cases</span>        - Deep-dive architectural case studies
+  • <span class="cmd-highlight">projects</span>     - Open-source repositories and agent workflows
+  • <span class="cmd-highlight">contact</span>      - Direct contact details & social profiles
+  • <span class="cmd-highlight">principles</span>   - Engineering philosophy and architecture tenets
+  • <span class="cmd-highlight">clear</span>        - Clear console output`,
+
+    skills: `Technical Arsenal:
+  • <strong>Cloud & Hybrid:</strong> Azure, Google Cloud (GCP), AWS, Cloudflare (Workers/KV/Tunnels), VMware vSphere
+  • <strong>Kubernetes & Containers:</strong> AKS, GKE, EKS, Docker, KEDA, PDBs, Helm, Argo CD GitOps
+  • <strong>IaC & Platforms:</strong> Reusable Terraform Modules, Foundation Repos, ARM Templates, Bash, Python
+  • <strong>CI/CD & Security:</strong> GitHub Actions, Azure DevOps, Universal CI (500+ Svcs), Workload Identity Federation
+  • <strong>AI & Agents:</strong> AI Coding Agents, Augment Cosmos, Zendesk/Slack PR Loops, CrewAI, Azure OpenAI
+  • <strong>Observability:</strong> Datadog, OpenTelemetry Operator, Jaeger Distributed Tracing, Elasticsearch/Kibana`,
+
+    journey: `Career Milestones:
+  • <strong>Nov 2024–Present:</strong> Pearl Technology — Enterprise Platform Modernization (Azure & GCP, 500+ Services CI/CD, GKE, AlloyDB)
+  • <strong>July 2023–Oct 2024:</strong> PSK Technology — Healthcare Validation Platform (AKS, Python Microservices, GitHub Actions, ELK)
+  • <strong>Jan 2022–June 2023:</strong> The Global Logica — Multi-Vendor E-Commerce (Monolith to Kubernetes Microservices, Elasticsearch)
+  • <strong>March 2019–Dec 2021:</strong> Mandatly — Compliance SaaS (Azure DevOps, AKS, Edge Ingestion with Cloudflare Workers/KV)
+  • <strong>Concurrent:</strong> Freelance Architect (TeraCar Distributed Tracing, AI App on AKS/Azure OpenAI, AWS ECS/EKS)
+  • <strong>2014–2019:</strong> Early Career & Education (Full-Stack Dev, Ionic/Angular, Diploma in Computer Engineering)`,
+
+    cases: `Selected Architecture Case Studies:
+  1. <strong>Universal CI/CD & AI-Assisted DevOps Support:</strong> Standardized 500+ microservices; AI agent prepares PRs with human Slack sign-off.
+  2. <strong>Azure-to-GCP Enterprise Modernization:</strong> AKS to GKE, Workload Identity Federation (no static JSON keys), AlloyDB continuous replication via DMS.
+  3. <strong>Edge-Assisted Consent Ingestion:</strong> Cloudflare Workers & KV buffer millions of consent events, offloading backend database I/O.
+  4. <strong>Commerce Monolith Decomposition:</strong> Separated catalog browsing from transactional orders/checkout into Kubernetes with HPA.
+  5. <strong>500+ NGINX Ingress to Gateway API:</strong> AI-assisted classification and candidate HTTPRoute generation with semantic linting.
+  6. <strong>Distributed Tracing for TeraCar:</strong> OpenTelemetry & Jaeger isolated an unindexed query in a downstream dependency.`,
+
+    projects: `Public Repositories on GitHub:
+  • <strong>er-prajapat/ai-labs</strong>: Coding agent skills & AI-Augmented Trunk Flow strategy.
+  • <strong>er-prajapat/AI-models</strong>: PyTorch neural text generation pipeline with Docker containerization.
+  • <strong>er-prajapat/bytechef</strong>: Extensible low-code workflow automation & API integration platform.
+  • <strong>er-prajapat/tf-test</strong>: Declarative Terraform Infrastructure as Code test modules.
+  • <strong>er-prajapat/angular-formio</strong>: JSON-schema powered dynamic form engine for Angular.
+  • <strong>er-prajapat/er-prajapat.github.io</strong>: High-performance portfolio website source.`,
+
+    contact: `Contact Information:
+  • <strong>Email:</strong> bharat.p2311@gmail.com
+  • <strong>GitHub:</strong> https://github.com/er-prajapat
+  • <strong>Website:</strong> https://er-prajapat.github.io
+  • <strong>Location:</strong> Surat, Gujarat, India (Open to Remote / Global Consulting)`,
+
+    principles: `Engineering Tenets:
+  1. Start with the real problem before choosing a technology.
+  2. Scale the application architecture, not just the machines.
+  3. Cost and reliability must be first-class citizens in design.
+  4. Standardize primitives before attempting automation.
+  5. Prove an idea with a working POC before scaling it.
+  6. Make AI accountable to engineering controls and human review.
+  7. Respect operational ownership across cross-functional teams.`,
+
+    sudo: `Permission denied: You already have full platform access! 😉`,
+    whoami: `visitor@guest (Welcome to Bharat Prajapat's Portfolio Hub)`
+  };
+
+  const handleCommand = (rawCmd) => {
+    const cmd = rawCmd.trim().toLowerCase();
+    if (!cmd) return;
+
+    // Print command line
+    const cmdLine = document.createElement('div');
+    cmdLine.className = 'term-line';
+    cmdLine.innerHTML = `<span class="term-prompt">visitor@guest:~$</span> <span class="term-typed">${escapeHtml(cmd)}</span>`;
+    termOutput.appendChild(cmdLine);
+
+    // Process output
+    const outputLine = document.createElement('div');
+    outputLine.className = 'term-output';
+
+    if (cmd === 'clear') {
+      termOutput.innerHTML = '';
+      return;
+    } else if (commandResponses[cmd]) {
+      outputLine.innerHTML = commandResponses[cmd];
+    } else {
+      outputLine.innerHTML = `command not found: <code>${escapeHtml(cmd)}</code>. Type <span class="cmd-highlight">help</span> to list available commands.`;
+    }
+
+    termOutput.appendChild(outputLine);
+    termOutput.scrollTop = termOutput.scrollHeight;
+  };
+
+  if (termForm && termInput) {
+    termForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = termInput.value;
+      termInput.value = '';
+      handleCommand(val);
+    });
+  }
+
+  if (termClear) {
+    termClear.addEventListener('click', () => {
+      termOutput.innerHTML = '';
+    });
+  }
+
+  pillBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cmd = btn.getAttribute('data-cmd');
+      if (cmd) {
+        handleCommand(cmd);
+      }
+    });
+  });
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
 });
