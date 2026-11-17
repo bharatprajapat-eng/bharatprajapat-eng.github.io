@@ -1,4 +1,4 @@
-// Interactive Logic for Bharat Prajapat's Portfolio Hub
+// Interactive Engine for Bharat Prajapat's Architecture & Portfolio Hub
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Current Year
@@ -7,7 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Dark / Light Theme Toggle
+  // 2. Ambient Mouse Spotlight Effect
+  const ambientCursor = document.createElement('div');
+  ambientCursor.className = 'ambient-glow-cursor';
+  document.body.appendChild(ambientCursor);
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentX = mouseX;
+  let currentY = mouseY;
+
+  window.addEventListener('pointermove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  }, { passive: true });
+
+  const renderSpotlight = () => {
+    currentX += (mouseX - currentX) * 0.12;
+    currentY += (mouseY - currentY) * 0.12;
+    ambientCursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(renderSpotlight);
+  };
+  requestAnimationFrame(renderSpotlight);
+
+  // 3. Dark / Light Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const htmlEl = document.documentElement;
 
@@ -27,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Mobile Navigation Menu
+  // 4. Mobile Navigation Menu
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -43,33 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Active Scroll Spy
-  const sections = document.querySelectorAll('section[id]');
+  // 5. Active Nav Item Highlighting based on current page
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   const navItems = document.querySelectorAll('.nav-link');
+  
+  navItems.forEach(item => {
+    const href = item.getAttribute('href');
+    if (!href) return;
+    const cleanHref = href.replace(/\/$/, '').replace(/\.html$/, '');
 
-  const onScroll = () => {
-    const scrollPos = window.scrollY + 120;
+    if (
+      (currentPath === '/' && (cleanHref === '/' || cleanHref === 'index' || cleanHref === '')) ||
+      (currentPath !== '/' && cleanHref !== '/' && currentPath.endsWith(cleanHref))
+    ) {
+      item.classList.add('active');
+    }
+  });
 
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        navItems.forEach(item => {
-          if (item.getAttribute('href') === `#${id}`) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      }
-    });
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  // 5. Interactive Terminal Simulator
+  // 6. Interactive Terminal Simulator
   const termForm = document.getElementById('termForm');
   const termInput = document.getElementById('termInput');
   const termOutput = document.getElementById('termOutput');
@@ -112,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     projects: `Featured Projects & Public Source:
   • <strong>bharatprajapat-eng.github.io</strong>: Public portfolio & architecture showcase source on GitHub.
-  • <strong>Architecture Case Studies</strong>: Type <span class="cmd-highlight">cases</span> to explore 6 in-depth multi-cloud & platform engineering systems.`,
+  • <strong>Architecture Case Studies</strong>: Type <span class="cmd-highlight">cases</span> or visit /case-studies to explore 6 in-depth multi-cloud systems.`,
 
     contact: `Contact Information:
   • <strong>Email:</strong> bharat.p2311@gmail.com
@@ -130,20 +144,18 @@ document.addEventListener('DOMContentLoaded', () => {
   7. Respect operational ownership across cross-functional teams.`,
 
     sudo: `Permission denied: You already have full platform access! 😉`,
-    whoami: `visitor@guest (Welcome to Bharat Prajapat's Portfolio Hub)`
+    whoami: `visitor@guest (Welcome to Bharat Prajapat's Architecture Hub)`
   };
 
   const handleCommand = (rawCmd) => {
     const cmd = rawCmd.trim().toLowerCase();
     if (!cmd) return;
 
-    // Print command line
     const cmdLine = document.createElement('div');
     cmdLine.className = 'term-line';
     cmdLine.innerHTML = `<span class="term-prompt">visitor@guest:~$</span> <span class="term-typed">${escapeHtml(cmd)}</span>`;
     termOutput.appendChild(cmdLine);
 
-    // Process output
     const outputLine = document.createElement('div');
     outputLine.className = 'term-output';
 

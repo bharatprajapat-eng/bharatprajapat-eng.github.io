@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Architecture Case Studies · Bharat Prajapat</title>
+  <meta name="description" content="In-depth technical case studies by Bharat Prajapat: Universal CI/CD at 500+ service scale, Azure-to-GCP enterprise modernization, Cloudflare Edge ingestion, and Kubernetes monolith decomposition." />
+  <meta name="author" content="Bharat Prajapat" />
+  <link rel="canonical" href="https://bharatprajapat-eng.github.io/case-studies.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Bharat Prajapat" />
+  <meta property="og:title" content="Architecture Case Studies · Bharat Prajapat" />
+  <meta property="og:description" content="Detailed engineering problem breakdowns, architectural strategies, and measurable outcomes." />
+  <meta property="og:url" content="https://bharatprajapat-eng.github.io/case-studies.html" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/24315782?v=4" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☸️</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar with Standout Animated Logo -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" aria-label="Bharat Prajapat Home">
+        <div class="logo-box">
+          <div class="logo-glow-ring"></div>
+          <div class="logo-badge">
+            <span class="logo-text">BP</span>
+          </div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Bharat Prajapat</span>
+          <span class="brand-title">Platform &amp; AI Architect</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/experience.html" class="nav-link">Experience</a>
+        <a href="/case-studies.html" class="nav-link active">Case Studies</a>
+        <a href="/skills.html" class="nav-link">Skills</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark and light mode" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="19" height="19" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="https://github.com/bharatprajapat-eng" target="_blank" rel="noopener noreferrer" class="btn btn-secondary nav-github" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-glow"></div>
+      <div class="container page-hero-content">
+        <div class="breadcrumb-nav">
+          <a href="/">Home</a> &rarr; <span>Case Studies</span>
+        </div>
+        <h1 class="page-title">Architecture <span class="gradient-text">Case Studies</span></h1>
+        <p class="page-description">
+          In-depth technical problem breakdowns, systems architecture designs, engineering trade-offs, and outcomes from high-scale environments.
+        </p>
+      </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="case-studies-grid">
+
+          <!-- Case Study 1 -->
+          <div class="case-card glass-panel" id="case-1">
+            <div class="case-badge">Enterprise Scale</div>
+            <h2 class="case-title">Universal CI/CD &amp; Multi-Agent DevOps Support</h2>
+            <div class="case-meta">Platform: Pearl Technology • Scale: 500+ Microservices &amp; Microfrontends</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>With hundreds of microservices across .NET, Node.js, Python, and Angular, engineering teams constantly flooded DevOps with manual requests for new pipelines, configuration drift, and CI fixes.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Designed a parameterized Universal CI template paired with a centralized Continuous Delivery repository that auto-generates missing deployment configurations on first build. Introduced an AI support workflow (Zendesk webhook &rarr; Augment Cosmos with repository context &rarr; specialized agent preparing PRs &rarr; Slack notification for team review and approval).</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Agent reliability requires structured engineering context, defined limits, deterministic checks, and human review—not unconstrained autonomous execution.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Universal CI</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Multi-Agent AI</span>
+              <span class="tag">Augment Cosmos</span>
+              <span class="tag">Slack Gatekeeper</span>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="case-card glass-panel" id="case-2">
+            <div class="case-badge">Multi-Cloud Migration</div>
+            <h2 class="case-title">Enterprise Azure-to-GCP Platform Modernization</h2>
+            <div class="case-meta">Scope: AKS &rarr; GKE • PostgreSQL &rarr; AlloyDB • Workload Identity</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Transitioning critical enterprise infrastructure from Azure to Google Cloud without downtime, eliminating fragile static credential files, and continuously replicating active database state across cloud boundaries.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Engineered reusable Terraform modules for GKE foundation. Established <strong>Workload Identity Federation for GKE</strong> to allow pods to securely impersonate Google Cloud service accounts with zero static JSON keys. Configured <strong>Google Cloud Database Migration Service (DMS)</strong> over secure cross-cloud VPN for continuous replication from Azure PostgreSQL to AlloyDB with minimal cutover interruption.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Translate architecture into the target platform's native primitives rather than forcing 1:1 legacy emulation.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">GKE</span>
+              <span class="tag">AlloyDB</span>
+              <span class="tag">Google Cloud DMS</span>
+              <span class="tag">Workload Identity</span>
+              <span class="tag">Terraform</span>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="case-card glass-panel" id="case-3">
+            <div class="case-badge">High-Throughput Edge</div>
+            <h2 class="case-title">Edge-Ingestion Pipeline for Privacy Compliance SaaS</h2>
+            <div class="case-meta">Platform: Mandatly • Focus: Database Protection &amp; Request Offloading</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Millions of user consent interactions across thousands of embedded customer websites generated massive spikes in synchronous API calls, exhausting database connection pools and inflating cloud I/O costs.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Architected an edge-ingestion layer using <strong>Cloudflare Workers &amp; Cloudflare KV</strong>. Consent selections are captured and acknowledged in sub-millisecond edge runs, buffered in KV, and ingested asynchronously into the core backend via scheduled Kubernetes batch workers.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Redesign the path a request takes through infrastructure rather than simply throwing expensive database compute at traffic spikes.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Cloudflare Workers</span>
+              <span class="tag">Cloudflare KV</span>
+              <span class="tag">Kubernetes Jobs</span>
+              <span class="tag">Async Ingestion</span>
+              <span class="tag">Cost Control</span>
+            </div>
+          </div>
+
+          <!-- Case Study 4 -->
+          <div class="case-card glass-panel" id="case-4">
+            <div class="case-badge">Microservices</div>
+            <h2 class="case-title">E-Commerce Monolith Decomposition into Kubernetes</h2>
+            <div class="case-meta">Platform: The Global Logica • Architecture: Monolith &rarr; Microservices</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>A unified Laravel backend ran browsing, cart management, and payment processing under one compute roof. High browsing traffic and marketing campaigns threatened the stability of checkout and payment transactions.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Decomposed critical transactional domains (Cart, Account, Orders, Invoicing, Vendor Payments) into dedicated microservices deployed to Kubernetes with Horizontal Pod Autoscaling (HPA). Shifted catalog browsing and search entirely to an Elasticsearch cluster synchronized on change events.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Isolate high-contention transactional boundaries from high-volume read workloads.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Kubernetes HPA</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">Elasticsearch</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Order Pipeline</span>
+            </div>
+          </div>
+
+          <!-- Case Study 5 -->
+          <div class="case-card glass-panel" id="case-5">
+            <div class="case-badge">AI-Assisted Migration</div>
+            <h2 class="case-title">500+ NGINX Ingress to Kubernetes Gateway API</h2>
+            <div class="case-meta">Scope: 500+ Ingress Manifests &rarr; Gateway Fabric &amp; HTTPRoute</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Modernizing a sprawling enterprise routing topology of over 500 Ingress configurations with diverse custom annotations, rewrites, timeouts, and backend targets to the modern Kubernetes Gateway API.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Developed an AI-assisted analysis workflow to parse Ingress manifests, categorize routing complexity, generate candidate <strong>Gateway and HTTPRoute</strong> resources, run deterministic YAML and semantic validation checks, and output reviewable pull requests for engineering sign-off.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>Use AI as a precision accelerator for repetitive syntax conversion while maintaining strict human-in-the-loop review.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">Gateway API</span>
+              <span class="tag">HTTPRoute</span>
+              <span class="tag">NGINX Gateway Fabric</span>
+              <span class="tag">LLM Validation</span>
+              <span class="tag">Safe Migration</span>
+            </div>
+          </div>
+
+          <!-- Case Study 6 -->
+          <div class="case-card glass-panel" id="case-6">
+            <div class="case-badge">Observability &amp; SRE</div>
+            <h2 class="case-title">Distributed Tracing &amp; Latency Root-Cause Isolation</h2>
+            <div class="case-meta">Platform: TeraCar (Cab Platform) • Tooling: OpenTelemetry &amp; Jaeger</div>
+            
+            <div class="case-block">
+              <div class="case-label">The Challenge</div>
+              <p>Critical booking API endpoints reported erratic response latency despite healthy 200 HTTP statuses and normal CPU/memory utilization on the primary service pods.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Architectural Strategy</div>
+              <p>Deployed the <strong>OpenTelemetry Operator</strong> for auto-instrumentation across Kubernetes pods and correlated Datadog infrastructure alerts with Jaeger distributed trace spans. Tracing isolated the latency not to the booking service itself, but to an unindexed query in an asynchronous downstream dependency.</p>
+            </div>
+
+            <div class="case-block">
+              <div class="case-label">Core Principle</div>
+              <p><em>A healthy individual service does not guarantee a healthy end-to-end user transaction.</em></p>
+            </div>
+
+            <div class="case-tags">
+              <span class="tag">OpenTelemetry</span>
+              <span class="tag">Jaeger</span>
+              <span class="tag">Datadog</span>
+              <span class="tag">Kubernetes Operator</span>
+              <span class="tag">Distributed Traces</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p>&copy; <span id="currentYear"></span> <strong>Bharat Prajapat</strong>. Engineered with precision &amp; hosted on GitHub Pages.</p>
+        <p class="footer-subtext">Cloud &amp; Platform Engineer • Multi-Cloud Solution Architect • AI-Assisted DevOps Automation</p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/experience.html">Experience</a>
+        <a href="/case-studies.html">Case Studies</a>
+        <a href="/skills.html">Skills</a>
+        <a href="/contact.html">Contact</a>
+        <a href="https://github.com/bharatprajapat-eng" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
