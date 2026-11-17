@@ -1,4 +1,4 @@
-// Interactive Engine for Bharat Prajapat's Architecture & Portfolio Hub
+// Engineering Hub Scripts for Bharat Prajapat
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Current Year
@@ -7,30 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // 2. Ambient Mouse Spotlight Effect
-  const ambientCursor = document.createElement('div');
-  ambientCursor.className = 'ambient-glow-cursor';
-  document.body.appendChild(ambientCursor);
-
-  let mouseX = window.innerWidth / 2;
-  let mouseY = window.innerHeight / 2;
-  let currentX = mouseX;
-  let currentY = mouseY;
-
-  window.addEventListener('pointermove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  }, { passive: true });
-
-  const renderSpotlight = () => {
-    currentX += (mouseX - currentX) * 0.12;
-    currentY += (mouseY - currentY) * 0.12;
-    ambientCursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-    requestAnimationFrame(renderSpotlight);
-  };
-  requestAnimationFrame(renderSpotlight);
-
-  // 3. Dark / Light Theme Toggle
+  // 2. Dark / Light Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const htmlEl = document.documentElement;
 
@@ -50,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Mobile Navigation Menu
+  // 3. Mobile Navigation Menu
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.getElementById('navLinks');
 
@@ -66,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Active Nav Item Highlighting based on current page
+  // 4. Active Nav Item Highlighting based on current page
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
   const navItems = document.querySelectorAll('.nav-link');
   
@@ -83,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 6. Interactive Terminal Simulator
+  // 5. Interactive Terminal Simulator
   const termForm = document.getElementById('termForm');
   const termInput = document.getElementById('termInput');
   const termOutput = document.getElementById('termOutput');
