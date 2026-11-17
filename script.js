@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   • <strong>Email:</strong> bharat.p2311@gmail.com
   • <strong>GitHub:</strong> https://github.com/bharatprajapat-eng
   • <strong>Website:</strong> https://bharatprajapat-eng.github.io
-  • <strong>Location:</strong> Surat, Gujarat, India (Open to Remote / Global Consulting)`,
+  • <strong>Location:</strong> India`,
 
     principles: `Engineering Tenets:
   1. Start with the real problem before choosing a technology.
