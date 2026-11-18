@@ -7,6 +7,33 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = new Date().getFullYear();
   }
 
+  // 1.5. Dynamic IST Live Clock (GMT+5:30)
+  function updateISTClock() {
+    try {
+      const options = {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      };
+      const timeStr = new Intl.DateTimeFormat('en-GB', options).format(new Date());
+      document.querySelectorAll('.live-ist-clock').forEach(el => {
+        el.textContent = timeStr;
+      });
+    } catch (e) {
+      const now = new Date();
+      const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const istDate = new Date(utc + (3600000 * 5.5));
+      const hours = String(istDate.getHours()).padStart(2, '0');
+      const minutes = String(istDate.getMinutes()).padStart(2, '0');
+      document.querySelectorAll('.live-ist-clock').forEach(el => {
+        el.textContent = `${hours}:${minutes}`;
+      });
+    }
+  }
+  updateISTClock();
+  setInterval(updateISTClock, 10000);
+
   // 2. Dark / Light Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const htmlEl = document.documentElement;

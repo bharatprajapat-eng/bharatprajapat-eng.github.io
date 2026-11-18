@@ -307,6 +307,122 @@ code {
 [data-theme="light"] .moon-icon { display: block; }
 
 /* ==========================================================================
+   TOP STATUS / ANNOUNCEMENT BAR
+   ========================================================================== */
+.top-status-bar {
+  background: rgba(8, 11, 18, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+[data-theme="light"] .top-status-bar {
+  background: rgba(248, 250, 252, 0.96);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.top-status-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0.45rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.top-status-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.status-pulse-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+.status-pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid #10b981;
+  animation: pulse-ring 2.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.7); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.top-status-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-status-link:hover {
+  color: var(--text-primary);
+}
+
+.top-status-link strong {
+  color: #34d399;
+  font-weight: 600;
+}
+
+[data-theme="light"] .top-status-link strong {
+  color: #059669;
+}
+
+.status-sep {
+  color: var(--text-muted);
+}
+
+.top-status-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.location-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.status-divider {
+  color: var(--border-color);
+  user-select: none;
+}
+
+.time-label {
+  color: var(--text-muted);
+}
+
+.live-ist-clock {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
    NAVIGATION & STANDOUT ENGINEERING LOGO
    ========================================================================== */
 .navbar {
@@ -509,7 +625,7 @@ code {
    ========================================================================== */
 .hero-section {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 8.75rem;
   padding-bottom: 5rem;
 }
 
@@ -670,7 +786,7 @@ code {
    Page Headers (Sub-pages)
    ========================================================================== */
 .page-hero {
-  padding-top: 7.5rem;
+  padding-top: 8.25rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-secondary);
@@ -1320,8 +1436,8 @@ code {
   }
 
   .nav-links {
-    position: fixed;
-    top: 59px;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
     background: var(--bg-secondary);
@@ -1330,10 +1446,21 @@ code {
     padding: 1.5rem;
     gap: 1.25rem;
     display: none;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
   }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .top-status-container {
+    padding: 0.4rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  .top-status-right .status-divider,
+  .top-status-right .time-label {
+    display: none;
   }
 
   .mobile-menu-toggle {
@@ -1362,3 +1489,13 @@ code {
     text-align: center;
   }
 }
+
+@media (max-width: 520px) {
+  .top-status-right {
+    display: none;
+  }
+  .top-status-link {
+    font-size: 0.71rem;
+  }
+}
+
